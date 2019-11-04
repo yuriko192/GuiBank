@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88D346F5-ABBE-4408-A6D7-95ABF02AB01D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>mbank.My.MyApplication</StartupObject>
+    <RootNamespace>mbank</RootNamespace>
+    <AssemblyName>mbank</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>mbank.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>mbank.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="01_Inbox.Designer.vb">
+      <DependentUpon>01_Inbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="01_Inbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_Main_menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_Main_menu.Designer.vb">
+      <DependentUpon>01_Main_menu.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02-Info_Rek\02_Info_rek.Designer.vb">
+      <DependentUpon>02_Info_rek.vb</DependentUpon>
+    </Compile>
+    <Compile Include="02-Info_Rek\02_Info_rek.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02-Info_Rek\02A_muta_keluar.Designer.vb">
+      <DependentUpon>02A_muta_keluar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="02-Info_Rek\02A_muta_keluar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02-Info_Rek\02B_muta_masuk.Designer.vb">
+      <DependentUpon>02B_muta_masuk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="02-Info_Rek\02B_muta_masuk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-Transfer\03C_tam_rekening.Designer.vb">
+      <DependentUpon>03C_tam_rekening.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-Transfer\03C_tam_rekening.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-Transfer\03_transfer.Designer.vb">
+      <DependentUpon>03_transfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-Transfer\03_transfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04-E_Comm\04D_A_Isi_Air.Designer.vb">
+      <DependentUpon>04D_A_Isi_Air.vb</DependentUpon>
+    </Compile>
+    <Compile Include="04-E_Comm\04D_A_Isi_Air.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05-E_Wallet\05A_TopUp.designer.vb">
+      <DependentUpon>05A_TopUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="05-E_Wallet\05A_TopUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05-E_Wallet\05B_Tambah_EWallet.designer.vb">
+      <DependentUpon>05B_Tambah_EWallet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="05-E_Wallet\05B_Tambah_EWallet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05-E_Wallet\05_EWallet.designer.vb">
+      <DependentUpon>05_EWallet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="05-E_Wallet\05_EWallet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="06-Pay_up\06A_EmailTelpNorek.Designer.vb">
+      <DependentUpon>06A_EmailTelpNorek.vb</DependentUpon>
+    </Compile>
+    <Compile Include="06-Pay_up\06A_EmailTelpNorek.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="06-Pay_up\06_Pay_up.Designer.vb">
+      <DependentUpon>06_Pay_up.vb</DependentUpon>
+    </Compile>
+    <Compile Include="06-Pay_up\06_Pay_up.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00_Login.Designer.vb">
+      <DependentUpon>00_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="00_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07-U_Acc\07A_atur_kartu.Designer.vb">
+      <DependentUpon>07A_atur_kartu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="07-U_Acc\07A_atur_kartu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07-U_Acc\07A_A_Info_Kartu.Designer.vb">
+      <DependentUpon>07A_A_Info_Kartu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="07-U_Acc\07A_A_Info_Kartu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07-U_Acc\07_U_Account.Designer.vb">
+      <DependentUpon>07_U_Account.vb</DependentUpon>
+    </Compile>
+    <Compile Include="07-U_Acc\07_U_Account.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04-E_Comm\04_E_Commerce.designer.vb">
+      <DependentUpon>04_E_Commerce.vb</DependentUpon>
+    </Compile>
+    <Compile Include="04-E_Comm\04_E_Commerce.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04-E_Comm\04A_Pulsa.designer.vb">
+      <DependentUpon>04A_Pulsa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="04-E_Comm\04A_Pulsa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04-E_Comm\04B_GPlay.designer.vb">
+      <DependentUpon>04B_GPlay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="04-E_Comm\04B_GPlay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04-E_Comm\04C_Listrik.designer.vb">
+      <DependentUpon>04C_Listrik.vb</DependentUpon>
+    </Compile>
+    <Compile Include="04-E_Comm\04C_Listrik.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04-E_Comm\04D_Air.designer.vb">
+      <DependentUpon>04D_Air.vb</DependentUpon>
+    </Compile>
+    <Compile Include="04-E_Comm\04D_Air.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobVar.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="03-Transfer\03A_trans_a_bank.Designer.vb">
+      <DependentUpon>03A_trans_a_bank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-Transfer\03A_trans_a_bank.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03-Transfer\03B_trans_a_rekening.Designer.vb">
+      <DependentUpon>03B_trans_a_rekening.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03-Transfer\03B_trans_a_rekening.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="00_Login.resx">
+      <DependentUpon>00_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_Inbox.resx">
+      <DependentUpon>01_Inbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_Main_menu.resx">
+      <DependentUpon>01_Main_menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02-Info_Rek\02_Info_rek.resx">
+      <DependentUpon>02_Info_rek.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02-Info_Rek\02A_muta_keluar.resx">
+      <DependentUpon>02A_muta_keluar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02-Info_Rek\02B_muta_masuk.resx">
+      <DependentUpon>02B_muta_masuk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-Transfer\03C_tam_rekening.resx">
+      <DependentUpon>03C_tam_rekening.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-Transfer\03_transfer.resx">
+      <DependentUpon>03_transfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04-E_Comm\04D_A_Isi_Air.resx">
+      <DependentUpon>04D_A_Isi_Air.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05-E_Wallet\05A_TopUp.resx">
+      <DependentUpon>05A_TopUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05-E_Wallet\05B_Tambah_EWallet.resx">
+      <DependentUpon>05B_Tambah_EWallet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05-E_Wallet\05_EWallet.resx">
+      <DependentUpon>05_EWallet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="06-Pay_up\06A_EmailTelpNorek.resx">
+      <DependentUpon>06A_EmailTelpNorek.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="06-Pay_up\06_Pay_up.resx">
+      <DependentUpon>06_Pay_up.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07-U_Acc\07A_atur_kartu.resx">
+      <DependentUpon>07A_atur_kartu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07-U_Acc\07A_A_Info_Kartu.resx">
+      <DependentUpon>07A_A_Info_Kartu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07-U_Acc\07_U_Account.resx">
+      <DependentUpon>07_U_Account.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04-E_Comm\04_E_Commerce.resx">
+      <DependentUpon>04_E_Commerce.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04-E_Comm\04A_Pulsa.resx">
+      <DependentUpon>04A_Pulsa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04-E_Comm\04B_GPlay.resx">
+      <DependentUpon>04B_GPlay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04-E_Comm\04C_Listrik.resx">
+      <DependentUpon>04C_Listrik.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04-E_Comm\04D_Air.resx">
+      <DependentUpon>04D_Air.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-Transfer\03A_trans_a_bank.resx">
+      <DependentUpon>03A_trans_a_bank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03-Transfer\03B_trans_a_rekening.resx">
+      <DependentUpon>03B_trans_a_rekening.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newQr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPW LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SPW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <None Include="Resources\Ovo.png" />
+    <None Include="Resources\Dana.png" />
+    <None Include="Resources\01.png" />
+    <None Include="Resources\Gplay3.png" />
+    <None Include="Resources\Pulsa.png" />
+    <None Include="Resources\Internet.png" />
+    <None Include="Resources\Pam.png" />
+    <None Include="Resources\Lampu.png" />
+    <None Include="Resources\faucet-1066626_960_720.png" />
+    <None Include="Resources\Kartu.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

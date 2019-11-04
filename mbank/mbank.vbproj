@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="00_Daftar.Designer.vb">
+      <DependentUpon>00_Daftar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="00_Daftar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="01_Inbox.Designer.vb">
       <DependentUpon>01_Inbox.vb</DependentUpon>
     </Compile>
@@ -239,6 +245,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="00_Daftar.resx">
+      <DependentUpon>00_Daftar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="00_Login.resx">
       <DependentUpon>00_Login.vb</DependentUpon>
     </EmbeddedResource>

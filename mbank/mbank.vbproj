@@ -367,6 +367,8 @@
     <None Include="Resources\SPW.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".TugasUas\.TugasUas.txt" />
+    <Content Include=".TugasUas\Bunga.png" />
     <Content Include="logo.ico" />
     <None Include="Resources\Ovo.png" />
     <None Include="Resources\Dana.png" />

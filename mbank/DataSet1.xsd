@@ -39,7 +39,16 @@
               <Mapping SourceColumn="Email" DataSetColumn="Email" />
               <Mapping SourceColumn="Handphone" DataSetColumn="Handphone" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="TugasBankUasConnectionString (MySettings)" DbObjectName="TugasBankUas.dbo.UserTable" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Type" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="Typea" GeneratorSourceName="Type" GetMethodModifier="Public" GetMethodName="Typea" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="Typea" UserSourceName="Type">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM dbo.UserTable where username = 'admin'</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />

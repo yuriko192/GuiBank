@@ -22,14 +22,28 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.UIDbox = New System.Windows.Forms.TextBox()
+        Me.Passbox = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.NoRekeningDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PasswordDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SaldoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HandphoneDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UserTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New mbank.DataSet1()
+        Me.UserTableTableAdapter = New mbank.DataSet1TableAdapters.UserTableTableAdapter()
         CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.UserTableBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.DataSet1,System.ComponentModel.ISupportInitialize).BeginInit
         Me.SuspendLayout
         '
         'PictureBox1
@@ -63,22 +77,22 @@ Partial Class Login
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Password"
         '
-        'TextBox1
+        'UIDbox
         '
-        Me.TextBox1.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(111, 328)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(207, 23)
-        Me.TextBox1.TabIndex = 3
+        Me.UIDbox.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.UIDbox.Location = New System.Drawing.Point(111, 328)
+        Me.UIDbox.Name = "UIDbox"
+        Me.UIDbox.Size = New System.Drawing.Size(207, 23)
+        Me.UIDbox.TabIndex = 3
         '
-        'TextBox2
+        'Passbox
         '
-        Me.TextBox2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(111, 357)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(207, 23)
-        Me.TextBox2.TabIndex = 4
+        Me.Passbox.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Passbox.Location = New System.Drawing.Point(111, 357)
+        Me.Passbox.Name = "Passbox"
+        Me.Passbox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.Passbox.Size = New System.Drawing.Size(207, 23)
+        Me.Passbox.TabIndex = 4
         '
         'Button1
         '
@@ -90,22 +104,87 @@ Partial Class Login
         Me.Button1.Text = "Login"
         Me.Button1.UseVisualStyleBackColor = true
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = false
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NoRekeningDataGridViewTextBoxColumn, Me.UsernameDataGridViewTextBoxColumn, Me.PasswordDataGridViewTextBoxColumn, Me.SaldoDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.HandphoneDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.UserTableBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(1, 92)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(361, 150)
+        Me.DataGridView1.TabIndex = 6
+        '
+        'NoRekeningDataGridViewTextBoxColumn
+        '
+        Me.NoRekeningDataGridViewTextBoxColumn.DataPropertyName = "NoRekening"
+        Me.NoRekeningDataGridViewTextBoxColumn.HeaderText = "NoRekening"
+        Me.NoRekeningDataGridViewTextBoxColumn.Name = "NoRekeningDataGridViewTextBoxColumn"
+        '
+        'UsernameDataGridViewTextBoxColumn
+        '
+        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
+        '
+        'PasswordDataGridViewTextBoxColumn
+        '
+        Me.PasswordDataGridViewTextBoxColumn.DataPropertyName = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.HeaderText = "Password"
+        Me.PasswordDataGridViewTextBoxColumn.Name = "PasswordDataGridViewTextBoxColumn"
+        '
+        'SaldoDataGridViewTextBoxColumn
+        '
+        Me.SaldoDataGridViewTextBoxColumn.DataPropertyName = "Saldo"
+        Me.SaldoDataGridViewTextBoxColumn.HeaderText = "Saldo"
+        Me.SaldoDataGridViewTextBoxColumn.Name = "SaldoDataGridViewTextBoxColumn"
+        '
+        'EmailDataGridViewTextBoxColumn
+        '
+        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "Email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
+        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
+        '
+        'HandphoneDataGridViewTextBoxColumn
+        '
+        Me.HandphoneDataGridViewTextBoxColumn.DataPropertyName = "Handphone"
+        Me.HandphoneDataGridViewTextBoxColumn.HeaderText = "Handphone"
+        Me.HandphoneDataGridViewTextBoxColumn.Name = "HandphoneDataGridViewTextBoxColumn"
+        '
+        'UserTableBindingSource
+        '
+        Me.UserTableBindingSource.DataMember = "UserTable"
+        Me.UserTableBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UserTableTableAdapter
+        '
+        Me.UserTableTableAdapter.ClearBeforeFill = true
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
         Me.ClientSize = New System.Drawing.Size(330, 431)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Passbox)
+        Me.Controls.Add(Me.UIDbox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
         Me.Name = "Login"
         Me.Text = "Login"
         CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.UserTableBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.DataSet1,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
         Me.PerformLayout
 
@@ -114,7 +193,17 @@ End Sub
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents UIDbox As TextBox
+    Friend WithEvents Passbox As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents DataSet1 As DataSet1
+    Friend WithEvents UserTableBindingSource As BindingSource
+    Friend WithEvents UserTableTableAdapter As DataSet1TableAdapters.UserTableTableAdapter
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents NoRekeningDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SaldoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents HandphoneDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

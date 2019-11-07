@@ -1,3 +1,3 @@
 ﻿Module GlobVar
-    Public main_m As New Main_menu
+    Public main_m As Main_menu
 End Module

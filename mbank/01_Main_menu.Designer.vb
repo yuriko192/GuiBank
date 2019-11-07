@@ -41,6 +41,7 @@ Partial Class Main_menu
         Me.Bcomm = New System.Windows.Forms.Button()
         Me.Bwall = New System.Windows.Forms.Button()
         Me.Btrans = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout
         Me.GroupBox2.SuspendLayout
         Me.SuspendLayout
@@ -141,6 +142,7 @@ Partial Class Main_menu
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(128,Byte),Integer))
+        Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Button1)
@@ -232,6 +234,18 @@ Partial Class Main_menu
         Me.Btrans.TabIndex = 19
         Me.Btrans.UseVisualStyleBackColor = true
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(124,Byte),Integer), CType(CType(157,Byte),Integer), CType(CType(50,Byte),Integer))
+        Me.Button2.Font = New System.Drawing.Font("MS Gothic", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(4, 9)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(55, 23)
+        Me.Button2.TabIndex = 18
+        Me.Button2.Text = "Logout"
+        Me.Button2.UseVisualStyleBackColor = false
+        '
         'Main_menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -269,4 +283,5 @@ End Sub
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Button2 As Button
 End Class

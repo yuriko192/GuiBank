@@ -76,10 +76,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="00_Daftar.Designer.vb">
-      <DependentUpon>00_Daftar.vb</DependentUpon>
+    <Compile Include="00-Login_and_Registration\00_DaftarA.Designer.vb">
+      <DependentUpon>00_DaftarA.vb</DependentUpon>
     </Compile>
-    <Compile Include="00_Daftar.vb">
+    <Compile Include="00-Login_and_Registration\00_DaftarA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="00-Login_and_Registration\00_DaftarB.Designer.vb">
+      <DependentUpon>00_DaftarB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="00-Login_and_Registration\00_DaftarB.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="01_Inbox.Designer.vb">
@@ -161,10 +167,10 @@
     <Compile Include="06-Pay_up\06_Pay_up.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="00_Login.Designer.vb">
+    <Compile Include="00-Login_and_Registration\00_Login.Designer.vb">
       <DependentUpon>00_Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="00_Login.vb">
+    <Compile Include="00-Login_and_Registration\00_Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="07-U_Acc\07A_atur_kartu.Designer.vb">
@@ -245,11 +251,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="00_Daftar.resx">
-      <DependentUpon>00_Daftar.vb</DependentUpon>
+    <EmbeddedResource Include="00-Login_and_Registration\00_DaftarA.resx">
+      <DependentUpon>00_DaftarA.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="00_Login.resx">
+    <EmbeddedResource Include="00-Login_and_Registration\00_Login.resx">
       <DependentUpon>00_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="00-Login_and_Registration\00_DaftarB.resx">
+      <DependentUpon>00_DaftarB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_Inbox.resx">
       <DependentUpon>01_Inbox.vb</DependentUpon>

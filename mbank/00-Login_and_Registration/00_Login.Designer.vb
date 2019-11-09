@@ -29,6 +29,7 @@ Partial Class Login
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
         Me.SuspendLayout
         '
@@ -49,9 +50,9 @@ Partial Class Login
         Me.Label1.Font = New System.Drawing.Font("MS Gothic", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
         Me.Label1.Location = New System.Drawing.Point(8, 329)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 19)
+        Me.Label1.Size = New System.Drawing.Size(97, 19)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "User ID"
+        Me.Label1.Text = "Username"
         '
         'Label2
         '
@@ -90,12 +91,23 @@ Partial Class Login
         Me.Button1.Text = "Login"
         Me.Button1.UseVisualStyleBackColor = true
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Button2.Location = New System.Drawing.Point(11, 386)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(83, 31)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "Daftar"
+        Me.Button2.UseVisualStyleBackColor = true
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.YellowGreen
         Me.ClientSize = New System.Drawing.Size(330, 431)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox2)
@@ -117,4 +129,5 @@ End Sub
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

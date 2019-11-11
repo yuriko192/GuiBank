@@ -173,6 +173,12 @@
     <Compile Include="00-Login_and_Registration\00_Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="07-U_Acc\07A_atur_info.Designer.vb">
+      <DependentUpon>07A_atur_info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="07-U_Acc\07A_atur_info.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="07-U_Acc\07A_atur_kartu.Designer.vb">
       <DependentUpon>07A_atur_kartu.vb</DependentUpon>
     </Compile>
@@ -304,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="06-Pay_up\06_Pay_up.resx">
       <DependentUpon>06_Pay_up.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07-U_Acc\07A_atur_info.resx">
+      <DependentUpon>07A_atur_info.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="07-U_Acc\07A_atur_kartu.resx">
       <DependentUpon>07A_atur_kartu.vb</DependentUpon>

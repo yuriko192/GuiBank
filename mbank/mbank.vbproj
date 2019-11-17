@@ -397,6 +397,7 @@
     <Content Include=".TugasUas\.TugasUas.txt" />
     <Content Include=".TugasUas\Bunga.png" />
     <Content Include="logo.ico" />
+    <Content Include="Query.txt" />
     <None Include="Resources\Ovo.png" />
     <None Include="Resources\Dana.png" />
     <None Include="Resources\01.png" />

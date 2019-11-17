@@ -261,6 +261,11 @@
     <Compile Include="03-Transfer\03B_trans_a_rekening.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TugasBankUasDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TugasBankUasDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="00-Login_and_Registration\00_DaftarA.resx">
@@ -365,6 +370,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="TugasBankUasDataSet.xsc">
+      <DependentUpon>TugasBankUasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TugasBankUasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TugasBankUasDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TugasBankUasDataSet.xss">
+      <DependentUpon>TugasBankUasDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info.png" />

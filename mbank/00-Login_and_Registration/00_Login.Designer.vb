@@ -22,15 +22,21 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.UnameBox = New System.Windows.Forms.TextBox()
+        Me.PassBox = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.USERACCBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TugasBankUasDataSet = New mbank.TugasBankUasDataSet()
+        Me.USER_ACCTableAdapter = New mbank.TugasBankUasDataSetTableAdapters.USER_ACCTableAdapter()
         CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.USERACCBindingSource,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.TugasBankUasDataSet,System.ComponentModel.ISupportInitialize).BeginInit
         Me.SuspendLayout
         '
         'PictureBox1
@@ -64,22 +70,22 @@ Partial Class Login
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Password"
         '
-        'TextBox1
+        'UnameBox
         '
-        Me.TextBox1.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(111, 328)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(207, 23)
-        Me.TextBox1.TabIndex = 3
+        Me.UnameBox.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.UnameBox.Location = New System.Drawing.Point(111, 328)
+        Me.UnameBox.Name = "UnameBox"
+        Me.UnameBox.Size = New System.Drawing.Size(207, 23)
+        Me.UnameBox.TabIndex = 3
         '
-        'TextBox2
+        'PassBox
         '
-        Me.TextBox2.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(111, 357)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(207, 23)
-        Me.TextBox2.TabIndex = 4
+        Me.PassBox.Font = New System.Drawing.Font("MS Gothic", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.PassBox.Location = New System.Drawing.Point(111, 357)
+        Me.PassBox.Name = "PassBox"
+        Me.PassBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.PassBox.Size = New System.Drawing.Size(207, 23)
+        Me.PassBox.TabIndex = 4
         '
         'Button1
         '
@@ -101,6 +107,20 @@ Partial Class Login
         Me.Button2.Text = "Daftar"
         Me.Button2.UseVisualStyleBackColor = true
         '
+        'USERACCBindingSource
+        '
+        Me.USERACCBindingSource.DataMember = "USER_ACC"
+        Me.USERACCBindingSource.DataSource = Me.TugasBankUasDataSet
+        '
+        'TugasBankUasDataSet
+        '
+        Me.TugasBankUasDataSet.DataSetName = "TugasBankUasDataSet"
+        Me.TugasBankUasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'USER_ACCTableAdapter
+        '
+        Me.USER_ACCTableAdapter.ClearBeforeFill = true
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -110,14 +130,16 @@ Partial Class Login
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.PassBox)
+        Me.Controls.Add(Me.UnameBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
         Me.Name = "Login"
         Me.Text = "Login"
         CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.USERACCBindingSource,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.TugasBankUasDataSet,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
         Me.PerformLayout
 
@@ -126,8 +148,11 @@ End Sub
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents UnameBox As TextBox
+    Friend WithEvents PassBox As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents TugasBankUasDataSet As TugasBankUasDataSet
+    Friend WithEvents USERACCBindingSource As BindingSource
+    Friend WithEvents USER_ACCTableAdapter As TugasBankUasDataSetTableAdapters.USER_ACCTableAdapter
 End Class
